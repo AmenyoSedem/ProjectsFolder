@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Realphone</title>
+</head>
+<body>
+    <div class="main">
+        <nav>
+            <div class="logo">
+                <img height="60" width="120" src="Images/logo.webp" alt="LOGO">
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Phone</a></li>
+                    <li><a href="#">Accessories</a></li>
+                    <li><a href="#">Cart</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="information">
+            <div class="overlay">
+
+            </div>
+            <img src="Images/mobilephone.jpg" alt="" class="mobile">
+            <div id="circle">
+                <div class="feature one">
+                    <img src="Images/camera.png" alt="">
+                    <div>
+                        <h1>Camera</h1>
+                        <p>12MP, Wide Angle Lens</p>
+                    </div>
+                </div>
+                <div class="feature two">
+                    <img src="Images/processor.png" alt="">
+                    <div>
+                        <h1>Processor</h1>
+                        <p>Snapdragon Octa-core 11nm</p>
+                    </div>
+                </div>
+                <div class="feature three">
+                    <img src="Images/display.jpg" alt="">
+                    <div>
+                        <h1>Display</h1>
+                        <p>6.5" Mini-Drop Fullscreen</p>
+                    </div>
+                </div>
+                <div class="feature four">
+                    <img src="Images/battery.jpg" alt="">
+                    <div>
+                        <h1>Battery</h1>
+                        <p>50000mAh, 720Hrs Standby</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <img src="Images/uparrow.png" alt="" id="upBtn">
+            <h3>Features</h3>
+            <img src="Images/downarrow.png" alt="" id="downBtn">
+        </div>
+
+    </div>
+
+    <script>
+        const circle = document.getElementById('circle')
+        const upBtn = document.getElementById('upBtn')
+        const downBtn = document.getElementById('downBtn')
+
+        let rotateValue = circle.style.transform;
+        let rotateSum;
+
+        upBtn.onclick = () => {
+            // console.log('The up button is clicked')
+            rotateSum = rotateValue + "rotate(-90deg)"
+            circle.style.transform = rotateSum
+            rotateValue = rotateSum
+        }
+
+        downBtn.onclick = () => {
+            // console.log('The up button is clicked')
+            rotateSum = rotateValue + "rotate(90deg)"
+            circle.style.transform = rotateSum
+            rotateValue = rotateSum
+        }
+    </script>
+
+</body>
+</html>
