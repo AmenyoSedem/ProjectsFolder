@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>GIFT CARD EXCHANGE APPLICATION</title>
+  </head>
+  <body>
+    <!-- This is the header section -->
+    <header class="header">
+      <h1 id="logo">LOGO</h1>
+      <nav class="navigation">
+        <a href="#">Home</a>
+        <a href="#">Features</a>
+        <a href="#">AboutUs</a>
+        <a href="#">ContactUs</a>
+        <button class="loginBtn-popup">Login</button>
+      </nav>
+    </header>
+
+    <!-- This is the login section -->
+    <div class="wrapper active">
+      <span class="close-icon"
+        ><ion-icon name="close" id="close"></ion-icon
+      ></span>
+      <h2>Login</h2>
+
+      <div class="login-form">
+        <form action="#">
+          <div class="input-box">
+            <span class="icon"><ion-icon name="mail"></ion-icon></span>
+            <input type="email" placeholder="Email" required />
+            <!-- <label>Email</label> -->
+          </div>
+          <div class="input-box">
+            <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+            <input
+              type="password"
+              placeholder="Password"
+              id="pass-input"
+              required
+            />
+            <!-- <label>Password</label> -->
+          </div>
+          <div class="remember-forgot">
+            <input type="checkbox" />
+            <label>Remember me</label>
+            <a href="#">Forgot Password</a>
+          </div>
+          <button type="submit" class="btn">Login</button>
+          <div class="login-register">
+            <p>Don't have an account?</p>
+            <a href="#" class="registration-link">Register</a>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- This is the end of the login section -->
+    <!------------------------------------------>
+
+    <!-- This is the beginning of the registration section -->
+    <div class="wrapper-rg active">
+      <span class="close-icon"
+        ><ion-icon name="close" class="close"></ion-icon
+      ></span>
+      <h2>Registration</h2>
+
+      <div class="register-form">
+        <form action="#">
+          <div class="input-box">
+            <span class="icon"><ion-icon name="person"></ion-icon></span>
+            <input type="text" placeholder="First Name" required />
+          </div>
+          <div class="input-box">
+            <span class="icon"><ion-icon name="person"></ion-icon></span>
+            <input type="text" placeholder="Last Name" required />
+          </div>
+          <div class="input-box">
+            <span class="icon"><ion-icon name="mail"></ion-icon></span>
+            <input type="email" placeholder="Email" required />
+          </div>
+          <div class="input-box">
+            <!-- <span class="icon" ><ion-icon name="calendar"></ion-icon></span> -->
+            <input type="date" required />
+          </div>
+          <div class="input-box">
+            <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+            <input
+              type="password"
+              placeholder="Password"
+              id="pass-input"
+              required
+            />
+            <!-- <label>Password</label> -->
+          </div>
+          <!-- <div class="remember-forgot">
+            <input type="checkbox" /><label>Remember me</label>
+            <a href="#">Forgot Password</a>
+          </div> -->
+          <button type="submit" class="btn">Register</button>
+          <div class="register-login">
+            <p>Don't have an account?</p>
+            <a href="#" class="login-link">Login</a>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- About Us section -->
+    <div class="about">
+      <div class="about-img">
+        <img src="Images/room.jpg" class="img" />
+      </div>
+      <div class="about-contents">
+        <h2 class="intro">This is an intro</h2>
+        <p class="paragraph">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus
+          voluptate pariatur facere veniam sed sunt asperiores laboriosam. Alias
+          harum sapiente ab vero accusantium sequi facilis, reprehenderit est
+          porro facere neque qui similique non repellat, fuga quos veritatis
+          maiores iusto officia voluptatem mollitia unde deserunt! A, incidunt
+          molestiae sunt id itaque magni soluta nulla architecto error eligendi,
+          vero, nihil ratione amet porro quaerat! Doloremque laborum,
+          praesentium a saepe repellat reiciendis tempora. Magni atque vel
+          velit, at expedita sunt earum facere porro non consequatur iste. Sequi
+          enim odit quisquam, incidunt cumque hic assumenda, rem esse voluptatem
+          corrupti quos nobis eveniet et fugit!
+        </p>
+      </div>
+      <button class="about-btn">About Us</button>
+    </div>
+    <br />
+
+    <!-- This is the Sponsors section -->
+    <div class="sponsors">
+      <h2>Sponsors</h2>
+      <img src="#" alt="image1" />
+      <img src="#" alt="Image2" />
+      <img src="#" alt="Image3" />
+      <img src="#" alt="Image4" />
+      <img src="#" alt="Image5" />
+      <img src="#" alt="Image6" />
+    </div>
+
+    <!-- This is the footer section -->
+    <div class="footer"></div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document.querySelector("#close").onclick = () => {
+          document.querySelector(".wrapper").style.display = "none";
+          document.querySelector(".wrapper-rg").style.display = "none";
+          document.querySelector(".sponsors").style.display = "block";
+          document.querySelector(".about").style.display = "block";
+        };
+
+        document.querySelector(".close").onclick = () => {
+          document.querySelector(".wrapper-rg").style.display = "none";
+          document.querySelector(".sponsors").style.display = "block";
+          document.querySelector(".about").style.display = "block";
+        };
+
+        document.querySelector(".loginBtn-popup").onclick = () => {
+          while (
+            (document.querySelector(".wrapper-rg").style.display = "block")
+          ) {
+            document.querySelector(".wrapper").style.display = "block";
+            document.querySelector(".wrapper-rg").style.display = "none";
+            document.querySelector(".about").style.display = "none";
+            document.querySelector(".sponsors").style.display = "none";
+          }
+          if (document.querySelector(".wrapper").style.display === "none") {
+            document.querySelector(".wrapper").style.display = "block";
+            document.querySelector("body").style.backgroundImage =
+              "url(Images/bg15.png)";
+            // document.querySelector("body").style.display = "flex";
+            document.querySelector(".about").style.display = "none";
+            document.querySelector(".sponsors").style.display = "none";
+            document.querySelector(".wrapper-rg").style.display = "none";
+          } else {
+            document.querySelector(".wrapper").style.display = "none";
+            document.querySelector("body").style.backgroundImage =
+              "url(Images/bg15.png)";
+            // document.querySelector("body").style.display = "flex";
+            // document.querySelector(".sponsors").style.display = "block";
+            // document.querySelector(".about").style.display = "block";
+            document.querySelector(".wrapper-rg").style.display = "none";
+          }
+        };
+
+        document.querySelector(".registration-link").onclick = () => {
+          document.querySelector(".wrapper").style.display = "none";
+          document.querySelector(".wrapper-rg").style.display = "block";
+        };
+
+        document.querySelector(".login-link").onclick = () => {
+          document.querySelector(".wrapper-rg").style.display = "none";
+          document.querySelector(".wrapper").style.display = "block";
+        };
+      });
+    </script>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>

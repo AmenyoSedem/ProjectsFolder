@@ -1,0 +1,558 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins);
+
+/* changing the default styles of the browser */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url(Images/bg15.png);
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  /* display: grid;
+  grid-template-columns: repeat(1, 1fr); */
+  /* background-color: #ffb30094; */
+  /* background-image: linear-gradient(
+    to right,
+    #f4e7c8,
+    rgb(234, 232, 207),
+    #f4e7c8
+  ); */
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 99;
+  /* background: transparent; */
+  /* box-shadow: 0 0 30px #000000; */
+  /* backdrop-filter: blur(10px); */
+}
+
+#logo {
+  color: #fff;
+  font-size: 2.3rem;
+  user-select: none;
+  background: transparent;
+  border: solid 2px;
+  border-radius: 10px;
+}
+
+nav {
+  top: 0;
+  background: transparent;
+  /* justify-content: space-between; */
+  /* box-shadow: 0 0 10px #000000; */
+  border-radius: 6px;
+}
+
+/* nav:hover {
+  box-shadow: 0 0 5px #2c2a28;
+} */
+
+nav a {
+  position: relative;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-left: 50px;
+  color: #fff;
+  text-decoration: none;
+  /* background: transparent; */
+  /* box-shadow: 0 0 20px #000000; */
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 3px;
+  background: #fff;
+  border-radius: 5px;
+  transform-origin: right;
+  transform: scale(0);
+  transition: transform 0.5s;
+}
+
+.navigation a:hover::after {
+  /* text-decoration: 2px solid underline; */
+  transform-origin: left;
+  transform: scale(1);
+}
+
+nav button {
+  background: transparent;
+  backdrop-filter: blur(10px);
+  width: 120px;
+  height: 50px;
+  outline: none;
+  color: #fff;
+  font-size: 1.2rem;
+  border-radius: 6px;
+  margin-left: 40px;
+  cursor: pointer;
+  font-weight: 500;
+  border: 2px solid #fff;
+  transition: 0.5s;
+  box-shadow: 0 0 30px #000000;
+}
+
+nav button:hover {
+  background: #fff;
+  color: #000000;
+  font-weight: bold;
+  box-shadow: 0 0 10px #3d3a37;
+  transition-delay: 0.13s;
+}
+
+/* Styling the Login wrapper form */
+.wrapper {
+  /* background-color: green; */
+  position: relative;
+  width: 400px;
+  height: 400px;
+  background: transparent;
+  border: 2px solid #bbb4b4;
+  border-radius: 40px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 30px #0b0606;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: height 0.2 ease;
+  display: none;
+  overflow: hidden;
+}
+
+.wrapper:hover {
+  box-shadow: 0 0 30px #2c2a28;
+  transition-delay: 0.11s;
+}
+
+.wrapper.active {
+  height: 520px;
+}
+
+.wrapper .login-form {
+  width: 100%;
+  padding: 10px;
+}
+
+.wrapper .close-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45px;
+  height: 45px;
+  background-color: #000000;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-left-radius: 20px;
+  cursor: pointer;
+  z-index: 9;
+}
+
+.wrapper .close-icon ion-icon {
+  height: 30px;
+  width: 30px;
+}
+
+.wrapper h2 {
+  /* background: #fff; */
+  padding: 20px;
+  padding-bottom: 70px;
+  font-size: 2.2rem;
+  text-align: center;
+  justify-content: center;
+  color: #000000;
+  top: 0;
+  /* right: 0; */
+  width: 100%;
+  height: 50px;
+}
+
+.input-box {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  /* border-bottom: 2px solid; */
+  margin: 20px 0;
+}
+
+.input-box input {
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-bottom: 20px;
+  width: 350px;
+  height: 100%;
+  background: #c7bcbc49;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #0b0606;
+  font-size: 1rem;
+  color: #000000;
+  font-weight: 500;
+  padding: 0 35px 0 5px;
+}
+
+.input-box .icon {
+  position: absolute;
+  right: 12px;
+  font-size: 1.2rem;
+  color: #000000;
+  line-height: 40px;
+}
+
+.remember-forgot {
+  font-size: 1.1rem;
+  color: #000000;
+  font-weight: 500;
+  margin: -15px 0 15px;
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.remember-forgot input {
+  accent-color: #000000;
+  margin-left: 18px;
+}
+
+.remember-forgot label {
+  margin-left: -60px;
+}
+
+.remember-forgot a {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #000000;
+  text-decoration: none;
+}
+
+.remember-forgot a:hover {
+  text-decoration: underline black;
+}
+
+.wrapper .btn {
+  margin-left: 9.7rem;
+  margin-top: 1rem;
+  width: 120px;
+  height: 45px;
+  background: #0b0606;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.login-register {
+  color: #000000;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 18px;
+  margin-top: 2rem;
+  justify-content: center;
+  display: flex;
+}
+
+.login-register a {
+  color: #000000;
+  font-weight: 700;
+  outline: none;
+  text-decoration: none;
+  margin-left: 5px;
+}
+
+.login-register a:hover {
+  text-decoration: underline;
+}
+
+/* @media screen {
+} */
+
+/*************************************************/
+/* This is the styling for the registration form */
+.wrapper-rg {
+  /* background-color: green; */
+  position: relative;
+  width: 420px;
+  height: 600px;
+  background: transparent;
+  border: 2px solid #bbb4b4;
+  border-radius: 40px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 30px #0b0606;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: 0.2 ease;
+  display: none;
+}
+
+.wrapper-rg:hover {
+  box-shadow: 0 0 30px #373431;
+}
+
+.wrapper-rg.active {
+  height: 620px;
+}
+
+.wrapper .register-form {
+  width: 100%;
+  padding: 10px;
+}
+
+.wrapper-rg .close-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45px;
+  height: 45px;
+  background-color: #000000;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-left-radius: 20px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.wrapper-rg .close-icon ion-icon {
+  height: 30px;
+  width: 30px;
+}
+
+.wrapper-rg h2 {
+  /* background: #fff; */
+  padding: 20px;
+  padding-bottom: 70px;
+  font-size: 2.2rem;
+  text-align: center;
+  justify-content: center;
+  color: #000000;
+  top: 0;
+  /* right: 0; */
+  width: 100%;
+  height: 50px;
+}
+
+.wrapper-rg .input-box {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  /* border-bottom: 2px solid; */
+  margin: 20px 0;
+  margin-left: 13px;
+}
+
+.wrapper-rg .input-box input {
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-bottom: 20px;
+  width: 350px;
+  height: 100%;
+  background: #c7bcbc49;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #0b0606;
+  font-size: 1.1rem;
+  color: #000000;
+  font-weight: 500;
+  padding: 0 35px 0 5px;
+}
+
+.wrapper-rg .input-box .icon {
+  position: absolute;
+  right: 82px;
+  font-size: 1.2rem;
+  color: #000000;
+  line-height: 40px;
+}
+
+.wrapper-rg .remember-forgot {
+  font-size: 1.1rem;
+  color: #000000;
+  font-weight: 500;
+  margin-left: 15px;
+  margin-top: 2.5rem;
+  /* display: flex; */
+  /* justify-content: space-between; */
+  display: none;
+}
+
+.wrapper-rg .remember-forgot input {
+  accent-color: #000000;
+  margin-left: 18px;
+  /* margin-right: 50px; */
+}
+
+.wrapper-rg .remember-forgot label {
+  margin-left: -1rem;
+  color: #000000;
+  background-color: #fff;
+}
+
+/* .wrapper .remember-forgot a {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #000000;
+  text-decoration: none;
+} */
+
+.wrapper-rg .remember-forgot label:hover {
+  text-decoration: underline black;
+}
+
+.wrapper-rg .btn {
+  margin-left: 11.5rem;
+  margin-top: 1rem;
+  width: 120px;
+  height: 45px;
+  background: #0b0606;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.wrapper-rg .register-login {
+  color: #000000;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 18px;
+  margin-top: 2rem;
+  justify-content: center;
+  display: flex;
+}
+
+.register-login a {
+  color: #000000;
+  font-weight: 700;
+  outline: none;
+  text-decoration: none;
+  margin-left: 5px;
+}
+
+.register-login a:hover {
+  text-decoration: underline;
+}
+/* This is the end of the styling of the registration wrapper */
+
+/*  */
+/*  */
+/*  */
+/* This is the styling of the about section form the html pages */
+.about {
+  /* background-color: #fff; */
+  /* width: 100vw; */
+  width: 1300px;
+  height: 300px;
+  /* background: transparent; */
+  border: 2px solid #86896f48;
+  box-shadow: 0 0 30px #000000;
+  border-radius: 10px;
+  backdrop-filter: blur(30px);
+  display: flex;
+  align-items: center;
+  position: absolute;
+}
+
+.about:hover {
+  box-shadow: 0 0 30px #2c2a28;
+  transition-delay: 0.11s;
+}
+
+.about .about-img {
+  margin-left: 4rem;
+  padding: 20px;
+  width: 200px;
+  height: 200px;
+  /* background: #4e3709; */
+  /* justify-content: center;
+  align-items: center; */
+}
+
+.about .img {
+  height: 180px;
+  width: 180px;
+  /* bottom: 0;
+  right: 0; */
+  /* border-left: 10px; */
+  padding: 10px;
+}
+.about .about-contents {
+  width: 600px;
+  height: 100%;
+  padding: 30px;
+  margin-left: 8rem;
+  margin-right: 6rem;
+  margin-bottom: 1rem;
+}
+
+.about .about-contents .intro {
+  font-size: 1.8rem;
+  font-weight: 900;
+  /* background-color: aqua; */
+  /* text-align: center; */
+  margin-bottom: 0.6rem;
+}
+
+.about .about-contents .paragraph {
+  line-height: 22px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.about .about-btn {
+  width: 100px;
+  height: 40px;
+  outline: none;
+  text-decoration: solid;
+  font-weight: 900;
+  font-size: 1rem;
+  border: 2px solid #c9bda84d;
+  background: transparent;
+  margin-top: 8rem;
+  cursor: pointer;
+  margin-left: 3rem;
+  box-shadow: 0 0 10px #312a27;
+  border-radius: 7px;
+}
+
+.about .about-btn:hover {
+  box-shadow: 0 0 5px #4d4745;
+  transition-delay: 0.11s;
+}
+
+.sponsors {
+  position: inherit;
+  /* bottom: 0; */
+  background-color: #fff;
+  display: flex;
+}
