@@ -1,0 +1,60 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #383838;
+}
+
+.stop-watch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 3px solid black;
+  background-color: #fff;
+  border-radius: 40px;
+  padding: 30px;
+  margin-top: 50px;
+}
+
+.display {
+  font-size: 50px;
+  font-family: monospace;
+  font-weight: 600;
+  color: #000;
+  text-shadow: 2px 2px 2px #898989;
+  margin-bottom: 25px;
+}
+
+.controls button {
+  font-size: 15px;
+  font-weight: 500;
+  padding: 10px 20px;
+  min-width: 110px;
+  margin: 5px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  color: #fff;
+  transition: background-color 0.5s ease;
+}
+
+.start-button {
+  background-color: #03a706;
+}
+.start-button:hover {
+  background-color: #056906;
+}
+
+.stop-button {
+  background-color: #a70337;
+}
+.stop-button:hover {
+  background-color: #69050f;
+}
+
+.reset-button {
+  background-color: #0363a7;
+}
+.reset-button:hover {
+  background-color: #053569;
+}
